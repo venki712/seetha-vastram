@@ -105,14 +105,6 @@ function searchProducts() {
 </script>
 <script>
 function addToCart(product, price) {
-    let count = localStorage.getItem("cartCount") || 0;
-    count = Number(count) + 1;
-    localStorage.setItem("cartCount", count);
-
-    alert(product + " added to cart!");
-}
-<script>
-function addToCart(product, price) {
     let count = Number(localStorage.getItem("cartCount")) || 0;
     count++;
     localStorage.setItem("cartCount", count);
@@ -124,5 +116,6 @@ function addToCart(product, price) {
     alert(product + " added to cart!");
 }
 </script>
+    
 </body>
 </html>
