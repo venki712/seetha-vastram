@@ -105,7 +105,11 @@ function searchProducts() {
 </script>
 <script>
 function addToCart(product, price) {
-    alert(product + " has been added to your cart!\nPrice: ₹" + price);
+    let count = localStorage.getItem("cartCount") || 0;
+    count = Number(count) + 1;
+    localStorage.setItem("cartCount", count);
+
+    alert(product + " added to cart!");
 }
 </script>
 </body>
