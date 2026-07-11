@@ -111,12 +111,16 @@ function addToCart(product, price) {
 
     alert(product + " added to cart!");
 }
-</script>
 <script>
-function addToCart(product) {
+function addToCart(product, price) {
+    let count = Number(localStorage.getItem("cartCount")) || 0;
+    count++;
+    localStorage.setItem("cartCount", count);
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(product);
+    cart.push(product + " - ₹" + price);
     localStorage.setItem("cart", JSON.stringify(cart));
+
     alert(product + " added to cart!");
 }
 </script>
