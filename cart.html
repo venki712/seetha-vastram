@@ -55,6 +55,9 @@ cursor:pointer;
 </a>
 
 </div>
-
+<script>
+let count = localStorage.getItem("cartCount") || 0;
+document.getElementById("cartCount").innerHTML = "Items in Cart: " + count;
+</script>
 </body>
 </html>
