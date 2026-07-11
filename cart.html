@@ -59,6 +59,21 @@ cursor:pointer;
 let count = localStorage.getItem("cartCount") || 0;
 document.getElementById("cartCount").innerHTML = "Items in Cart: " + count;
 </script>
-  
+ <script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+document.getElementById("cartCount").innerText = "Items in Cart: " + cart.length;
+
+let cartBox = document.getElementById("cartItems");
+
+if (cart.length > 0) {
+    cartBox.innerHTML = "";
+    cart.forEach(function(item) {
+        cartBox.innerHTML += "<p>🛍️ " + item + "</p>";
+    });
+}
+</script>
+
+</body> 
 </body>
 </html>
