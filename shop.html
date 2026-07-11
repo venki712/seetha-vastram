@@ -79,6 +79,21 @@ style="width:300px;padding:12px;border-radius:8px;border:none;margin:20px;font-s
 </div>
 
 </div>
+<script>
+function searchProducts() {
+  let input = document.getElementById("searchBox").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
 
+  for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+    if (title.includes(input)) {
+      cards[i].style.display = "block";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
 </body>
 </html>
