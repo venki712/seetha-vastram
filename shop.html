@@ -112,5 +112,13 @@ function addToCart(product, price) {
     alert(product + " added to cart!");
 }
 </script>
+<script>
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(product + " added to cart!");
+}
+</script>
 </body>
 </html>
