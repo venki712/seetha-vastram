@@ -77,6 +77,19 @@ if (cart.length > 0) {
     });
  document.getElementById("totalPrice").innerText = "Total: ₹" + total;
 }
+  }
+
+function removeItem(item) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart = cart.filter(i => i !== item);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartCount", cart.length);
+
+    location.reload();
+}
+
 </script>
  
 </body>
