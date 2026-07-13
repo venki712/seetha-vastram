@@ -68,6 +68,7 @@ document.getElementById("cartCount").innerText = "Items in Cart: " + cart.length
 let cartBox = document.getElementById("cartItems");
 
 if (cart.length > 0) {
+ let total = 0;
     cartBox.innerHTML = "";
     cart.forEach(function(item) {
         cartBox.innerHTML += "<p>🛍️ " + item + "</p>";
