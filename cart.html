@@ -54,6 +54,7 @@ cursor:pointer;
 <a href="shop.html">
 <button>Continue Shopping</button>
 </a>
+ <button onclick="clearCart()">🗑️ Clear Cart</button>
 
 </div>
 <script>
@@ -89,7 +90,11 @@ function removeItem(item) {
 
     location.reload();
 }
-
+function clearCart() {
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartCount");
+    location.reload();
+}
 </script>
  
 </body>
