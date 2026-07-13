@@ -93,7 +93,8 @@ function removeItem(item) {
 function clearCart() {
     localStorage.removeItem("cart");
     localStorage.removeItem("cartCount");
-    location.reload();
+    document.getElementById("cartCount").innerText = "Items in Cart: 0";
+location.reload();
 }
 </script>
  
