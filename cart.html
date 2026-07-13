@@ -63,6 +63,7 @@ document.getElementById("cartCount").innerHTML = "Items in Cart: " + count;
 </script>
  <script>
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  count = cart.length;
 
 document.getElementById("cartCount").innerText = "Items in Cart: " + cart.length;
 
