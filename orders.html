@@ -7,11 +7,18 @@
 
 <h1>📦 My Orders</h1>
 
-<p>No orders yet.</p>
+<p id="orderText">No orders yet.</p>
 
 <a href="shop.html">
     <button>Continue Shopping</button>
 </a>
+<script>
+let order = localStorage.getItem("lastOrder");
 
+if (order) {
+    document.getElementById("orderText").innerHTML =
+        "✅ " + order + "<br><br>Status: Confirmed";
+}
+</script>
 </body>
 </html>
