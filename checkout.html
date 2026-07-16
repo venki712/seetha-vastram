@@ -27,9 +27,20 @@
         <script>
             function placeOrder() {
         alert("🎉 Thank you! Your order has been placed successfully.");
+        let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+let payment = document.getElementById("payment").value;
+                let message =
+"🛍️ *New Order - Seetha Vastram*%0A%0A" +
+"👤 Name: " + name + "%0A" +
+"📞 Phone: " + phone + "%0A" +
+"🏠 Address: " + address + "%0A" +
+"💳 Payment: " + payment;
         localStorage.setItem("lastOrder", "Order ID: SV2026001 - Status: Confirmed");
         localStorage.removeItem("cart");
         localStorage.removeItem("cartCount");
+        window.open("https://wa.me/919611572494?text=" + message, "_blank");
         window.location.href = "success.html";
     }
         </script>
