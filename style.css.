@@ -73,3 +73,51 @@ nav a {
 nav a:hover {
     color: #ff69b4;
 }
+body{
+    background:#000;
+    color:white;
+    font-family:Georgia, serif;
+}
+
+.hero{
+    margin:40px auto;
+    width:90%;
+    padding:80px 20px;
+    text-align:center;
+    background:#000;
+    border:3px solid gold;
+    border-radius:25px;
+    box-shadow:0 0 25px rgba(255,215,0,.5);
+}
+
+.hero h1{
+    color:gold;
+    font-size:60px;
+}
+
+.hero p{
+    color:white;
+    font-size:28px;
+}
+
+.hero h2{
+    color:gold;
+    margin-top:25px;
+    font-size:38px;
+}
+
+nav{
+    background:#000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+}
+
+.card{
+    background:#111;
+    border:2px solid gold;
+    border-radius:15px;
+}
