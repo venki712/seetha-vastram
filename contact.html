@@ -40,8 +40,11 @@ cursor:pointer;
 
 <body>
 
-<h1>Contact Seetha Vastram</h1>
-
+<h1>📞 Contact Seetha Vastram</h1>
+<input type="text" id="name" placeholder="Your Name"><br><br>  
+<input type="email" id="email" placeholder="Your Email"><br><br>
+<textarea id="message" placeholder="Your Message"></textarea><br><br>
+<button onclick="sendMessage()">Send Message</button>
 <div class="box">
 <h2>📞 Phone</h2>
 <p>+91 96115 72494</p>
@@ -57,6 +60,10 @@ cursor:pointer;
 </a>
 
 </div>
-
+<script>
+function sendMessage() {
+    alert("✅ Thank you for contacting Seetha Vastram! We will contact you soon.");
+}
+</script>
 </body>
 </html>
