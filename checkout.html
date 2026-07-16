@@ -31,17 +31,36 @@
 let phone = document.getElementById("phone").value;
 let address = document.getElementById("address").value;
 let payment = document.getElementById("payment").value;
-                let message =
-"🛍️ *New Order - Seetha Vastram*%0A%0A" +
-"👤 Name: " + name + "%0A" +
-"📞 Phone: " + phone + "%0A" +
-"🏠 Address: " + address + "%0A" +
-"💳 Payment: " + payment;
-        localStorage.setItem("lastOrder", "Order ID: SV2026001 - Status: Confirmed");
-        localStorage.removeItem("cart");
-        localStorage.removeItem("cartCount");
-        window.open("https://wa.me/919611572494?text=" + message, "_blank");
-        window.location.href = "success.html";
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let message = "🛍️ *New Order - Seetha Vastram*%0A%0A";
+
+cart.forEach(function(item) {
+    message += "🧵 Product: " + item.product + "%0A";
+    message += "💰 Price: ₹" + item.price + "%0A";
+    message += "🖼️ Image: https://venki712.github.io/seetha-vastram/" + item.image + "%0A%0A";
+});
+
+message += "👤 Name: " + name + "%0A";
+message += "📞 Phone: " + phone + "%0A";
+message += "🏠 Address: " + address + "%0A";
+message += "💳 Payment: " + payment;
+message += "👤 Name: " + name + "%0A";
+message += "📞 Phone: " + phone + "%0A";
+message += "🏠 Address: " + address + "%0A";
+message += "💳 Payment: " + payment;
+
+localStorage.setItem("lastOrder", "Order ID: SV2026001 - Status: Confirmed");
+localStorage.removeItem("cart");
+localStorage.removeItem("cartCount");
+
+window.open(
+    "https://wa.me/919611572494?text=" + message,
+    "_blank"
+);
+
+window.location.href = "success.html";
+
     }
         </script>
     </body>
