@@ -121,3 +121,36 @@ nav a{
     border:2px solid gold;
     border-radius:15px;
 }
+.hero{
+    background:#000;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.hero-box{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 30px;
+    background:#080808;
+    border:3px solid #d4af37;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(212,175,55,.4);
+}
+
+.hero-box h1{
+    color:#d4af37;
+    font-size:56px;
+    margin-bottom:20px;
+    font-family:Georgia,serif;
+}
+
+.hero-box p{
+    color:#fff;
+    font-size:26px;
+}
+
+.hero-box h2{
+    color:#d4af37;
+    margin-top:25px;
+    font-size:34px;
+}
