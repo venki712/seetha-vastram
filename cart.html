@@ -78,6 +78,17 @@ if (cart.length > 0) {
  let total = 0;
     cartBox.innerHTML = "";
     cart.forEach(function(item) {
+    total += Number(item.price);
+
+    cartBox.innerHTML += `
+        <div style="margin-bottom:20px;">
+            <img src="${item.image}" width="120"><br>
+            <b>${item.product}</b><br>
+            ₹${item.price}<br>
+            <button onclick="removeItem('${item.product}')">Remove</button>
+        </div>
+    `;
+});
      let price = Number(item.split("₹")[1]);
      total += price;
       cartBox.innerHTML += `<p>📁 ${item} <button onclick="removeItem('${item}')">❌ Remove</button></p>`;
