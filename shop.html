@@ -72,7 +72,7 @@ style="width:60%;padding:12px;margin:20px;border-radius:8px;font-size:16px;">
 <p>₹6,750</p>
 <a href="https://wa.me/919611572494?text=Hi%20Seetha%20Vastram!%20I%20want%20to%20buy%20the%20Royal%20Pink%20Silk%20Saree." target="_blank">
 <a href="cart.html">
-<button onclick="addToCart('Silk Saree',6750)">Add to Cart</button>
+<button onclick="addToCart('Silk Saree',6750,'1.png')">Add to Cart</button>
 </a>
 </a>
 </div>
@@ -84,7 +84,7 @@ style="width:60%;padding:12px;margin:20px;border-radius:8px;font-size:16px;">
 <p>₹6,750</p>
 <a href="https://wa.me/919611572494?text=Hi%20Seetha%20Vastram!%20I%20want%20to%20buy%20the%20Banarasi%20Saree." target="_blank">
 <a href="cart.html">
-<button onclick="addToCart('Silk Saree',6750)">Add to Cart</button>
+<button onclick="addToCart('Silk Saree',6750,'2.png')">Add to Cart</button>
 </a>
 </a>
 </div>
@@ -96,7 +96,7 @@ style="width:60%;padding:12px;margin:20px;border-radius:8px;font-size:16px;">
 <p>₹6,750</p>
 <a href="https://wa.me/919611572494?text=Hi%20Seetha%20Vastram!%20I%20want%20to%20buy%20the%20Bridal%20Saree." target="_blank">
 <a href="cart.html">
-<button onclick="addToCart('Bridal Saree',6750)">Add to Cart</button>
+<button onclick="addToCart('Silk Saree',6750,'3.png')">Add to Cart</button>
 </a>
 </a>
 </div>
@@ -118,14 +118,18 @@ function searchProducts() {
   }
 }
 </script>
-<script>
-function addToCart(product, price) {
+<script
+    function addToCart(product, price, image) {
     let count = Number(localStorage.getItem("cartCount")) || 0;
     count++;
     localStorage.setItem("cartCount", count);
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(product + " - ₹" + price);
+    cart.push({
+    product: product,
+    price: price,
+    image: image
+});
     localStorage.setItem("cart", JSON.stringify(cart));
 
     alert(product + " added to cart!");
