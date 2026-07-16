@@ -131,6 +131,21 @@ function addToCart(product, price) {
     alert(product + " added to cart!");
 }
 </script>
-    
+<script>
+function searchProducts() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+        if (title.includes(input)) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>   
 </body>
 </html>
