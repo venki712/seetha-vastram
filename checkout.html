@@ -21,10 +21,13 @@
     <button onclick="placeOrder()">Place Order</button>
     <script>
         function placeOrder() {
-            alert("🎉 Order Placed Successfully!");
-            localStorage.removeItem("cart");
-            localStorage.removeItem("cartCount");
-            window.location.href = "shop.html";
+    alert("🎉 Thank you! Your order has been placed successfully.");
+
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartCount");
+
+    window.location.href = "shop.html";
+}
         }
     </script>
 </body>
