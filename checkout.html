@@ -27,6 +27,7 @@
         <script>
             function placeOrder() {
         alert("🎉 Thank you! Your order has been placed successfully.");
+        localStorage.setItem("lastOrder", "Order ID: SV2026001 - Status: Confirmed");
         localStorage.removeItem("cart");
         localStorage.removeItem("cartCount");
         window.location.href = "success.html";
