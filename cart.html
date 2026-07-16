@@ -75,11 +75,10 @@ if (cart.length > 0) {
     cart.forEach(function(item) {
      let price = Number(item.split("₹")[1]);
      total += price;
-      cartBox.innerHTML += "<p>📁 " + item + " <button onclick='removeItem(\"" + item + "\")'>❌ Remove</button></p>";
+      cartBox.innerHTML += `<p>📁 ${item} <button onclick="removeItem('${item}')">❌ Remove</button></p>`;
     });
  document.getElementById("totalPrice").innerText = "Total: ₹" + total;
 }
-  }
 
 function removeItem(item) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
