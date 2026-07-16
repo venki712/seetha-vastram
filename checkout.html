@@ -6,16 +6,19 @@
 <body>
     <h1>Checkout</h1>
 
-    <h3>Customer Details</h3>
+   
 
-    <input type="text" placeholder="Full Name"><br><br>
+    <input type="text" id="name" placeholder="Full Name"><br><br>
 
-    <input type="text" placeholder="Mobile Number"><br><br>
+<input type="tel" id="phone" placeholder="Mobile Number"><br><br>
 
-    <textarea placeholder="Delivery Address"></textarea><br><br>
-
+<textarea id="address" placeholder="Delivery Address"></textarea><br><br>
+    <select id="payment">
+    <option>Cash on Delivery</option>
+    <option>UPI</option>
+    <option>Credit/Debit Card</option>
+</select><br><br>
     <button onclick="placeOrder()">Place Order</button>
-
     <script>
         function placeOrder() {
             alert("🎉 Order Placed Successfully!");
