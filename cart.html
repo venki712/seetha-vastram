@@ -89,17 +89,11 @@ if (cart.length > 0) {
         </div>
     `;
 });
-     let price = Number(item.split("₹")[1]);
-     total += price;
-      cartBox.innerHTML += `<p>📁 ${item} <button onclick="removeItem('${item}')">❌ Remove</button></p>`;
-    });
- document.getElementById("totalPrice").innerText = "Total: ₹" + total;
-}
-
+    
 function removeItem(item) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    cart = cart.filter(i => i !== item);
+    cart = cart.filter(i => i.product !== item);
 
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("cartCount", cart.length);
